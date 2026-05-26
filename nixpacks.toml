@@ -1,0 +1,8 @@
+[phases.build]
+cmds = ["mvn -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean dependency:list install"]
+
+[phases.start]
+cmd = "java -jar target/bfhl-api-0.0.1-SNAPSHOT.jar"
+
+[variables]
+NIXPACKS_JDK_VERSION = "21"
