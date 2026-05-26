@@ -1,5 +1,6 @@
 package com.bajaj.bfhl.exception;
 
+import com.bajaj.bfhl.config.CandidateConfig;
 import com.bajaj.bfhl.dto.BfhlResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +19,12 @@ import java.util.Collections;
 public class GlobalExceptionHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
+
+    private final CandidateConfig candidateConfig;
+
+    public GlobalExceptionHandler(CandidateConfig candidateConfig) {
+        this.candidateConfig = candidateConfig;
+    }
 
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public ResponseEntity<BfhlResponse> handleInvalidPayload(HttpMessageNotReadableException ex) {
@@ -40,9 +47,9 @@ public class GlobalExceptionHandler {
     private BfhlResponse buildErrorResponse() {
         BfhlResponse response = new BfhlResponse();
         response.setIsSuccess(false);
-        response.setUserId("");
-        response.setEmail("");
-        response.setRollNumber("");
+        response.setUserId(candidateConfig.getUserId());
+        response.setEmail(candidateConfig.getEmail());
+        response.setRollNumber(candidateConfig.getRollNumber());
         response.setEvenNumbers(Collections.emptyList());
         response.setOddNumbers(Collections.emptyList());
         response.setAlphabets(Collections.emptyList());

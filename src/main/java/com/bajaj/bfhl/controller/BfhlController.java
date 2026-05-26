@@ -33,6 +33,12 @@ public class BfhlController {
         return ResponseEntity.ok(response);
     }
 
+    @GetMapping("/bfhl")
+    public ResponseEntity<java.util.Map<String, Object>> getOperationCode() {
+        logger.info("GET /bfhl - Operation code requested");
+        return ResponseEntity.ok(java.util.Map.of("operation_code", 1));
+    }
+
     @GetMapping("/health")
     public ResponseEntity<java.util.Map<String, String>> healthCheck() {
         logger.info("GET /health - Health check requested");
