@@ -10,7 +10,7 @@ public class CandidateConfig {
 
     private static final String USER_ID = "chhavi_joshi_17122005";
     private static final String EMAIL = "chhavijoshi230275@acropolis.in";
-    private static final String ROLL_NUMBER = "0827IT23103";
+    private static final String ROLL_NUMBER = "0827IT231037";
 
     public String getUserId() {
         return USER_ID;

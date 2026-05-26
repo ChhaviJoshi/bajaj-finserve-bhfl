@@ -67,7 +67,7 @@ class BfhlControllerTest {
                 .andExpect(jsonPath("$.is_success").value(false))
                 .andExpect(jsonPath("$.user_id").value("chhavi_joshi_17122005"))
                 .andExpect(jsonPath("$.email").value("chhavijoshi230275@acropolis.in"))
-                .andExpect(jsonPath("$.roll_number").value("0827IT23103"));
+                .andExpect(jsonPath("$.roll_number").value("0827IT231037"));
     }
 
     @Test
