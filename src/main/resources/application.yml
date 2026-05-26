@@ -2,5 +2,5 @@ server:
   port: ${PORT:8080}
 
 candidate:
-  email: cj5766@srmist.edu.in
-  rollNumber: RA2311003010629
+  email: chhavijoshi230275@acropolis.in
+  rollNumber: 0827IT23103

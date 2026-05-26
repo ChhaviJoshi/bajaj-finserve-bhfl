@@ -23,8 +23,6 @@ class BfhlServiceImplTest {
     @BeforeEach
     void setUp() {
         CandidateConfig config = new CandidateConfig();
-        config.setEmail("test@example.com");
-        config.setRollNumber("TEST123");
         service = new BfhlServiceImpl(config);
     }
 
